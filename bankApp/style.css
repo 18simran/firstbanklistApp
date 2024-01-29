@@ -1,15 +1,16 @@
 body {
-  background: #dbeaec;
+  background: #d4f3f5;
   margin: 0;
   box-sizing: border-box;
+  height: 100vh;
+  padding: 3rem;
   font-family: 'Roboto', sans-serif;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
-  margin: 20px auto;
+  padding: 0 2rem;
 }
 .logo img {
   width: 3rem;
@@ -19,7 +20,11 @@ form {
   justify-content: center;
   gap: 1rem;
 }
-.login .login__input {
+.welcome {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.login .login_input {
   background: #ffffff;
   padding: 1rem;
   width: 8rem;
@@ -30,29 +35,189 @@ form {
   font-size: 12px;
   color: #808080;
 }
+.login input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+.login input::placeholder {
+  color: #bbb;
+}
 .login_button {
   color: black;
   border: none;
   font-size: 25px;
-  background: #dbeaec;
+  background: #d4f3f5;
 }
+/* ******************
+main
+****************** */
 .app {
-  width: 100%;
+  position: relative;
+  max-width: 100rem;
+  margin: auto 15rem;
+  padding: 5rem 0 10rem 0;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  row-gap: 2rem;
+  column-gap: 4rem;
+
+  /* opacity: 0; */
+  transition: all 3s;
 }
 .balance {
+  grid-column: 1 / span 2;
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: center;
-  margin: auto 25rem;
+  margin-bottom: 2rem;
 }
 .balance_label {
-  font-size: 1.1rem;
-  font-weight: bolder;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: -0.2rem;
 }
 .balance_date {
   color: rgb(103, 97, 97);
   font-size: 0.9rem;
 }
-.balance__value {
+.balance_value {
   font-size: 2.5rem;
+}
+/* ******************
+movements
+****************** */
+.movements {
+  grid-row: 2 / span 3;
+  background: white;
+  border-radius: 1rem;
+  overflow: scroll;
+}
+.movements_row {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1.2rem;
+  border-bottom: 1px solid #eee;
+}
+.movements_type {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
+}
+.movements_date {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+}
+.movements_type_deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+.movements_type_withdrawal {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+.movements_value {
+  font-size: 1.2rem;
+  margin-left: auto;
+}
+/* ******************
+summary
+****************** */
+.summary {
+  grid-row: 5 /6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
+}
+.summary_label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+.summary_value {
+  font-size: 1rem;
+  margin-right: 0.6rem;
+}
+.summary_value_in,
+.summary_value_interest {
+  color: #66c873;
+}
+.summary_value_out {
+  color: #f5465d;
+}
+.btn_sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.operation {
+  border-radius: 20px;
+  padding: 1.5rem 3rem;
+}
+.operation_transfer {
+  background-image: linear-gradient(
+    to right,
+    rgb(244, 169, 47),
+    #ffa500,
+    #ffae1a,
+    #ffb733,
+    rgb(244, 169, 47)
+  );
+}
+.operation_request {
+  background-image: linear-gradient(to right, #339933, #4da64d, #339933);
+}
+.operation_close {
+  background-image: linear-gradient(to right, #e60000, #e71616, #ff0000);
+}
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 2.5fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+.form_btn {
+  margin-top: 0.4rem;
+  width: 3.5rem;
+  height: 1.6rem;
+  border-radius: 5px;
+  border: none;
+}
+.form_input::placeholder {
+  color: white;
+}
+.form_input:focus {
+  outline: none;
+}
+.form_input {
+  border: none;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background: rgb(255, 237, 204, 0.5);
+}
+.form_label {
+  font-size: 1rem;
+  text-align: center;
+}
+.logout-timer {
+  display: flex;
+  align-items: center;
+  grid-row: 5/6;
+  margin-left: auto;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+.timer {
+  font-weight: 600;
+  margin-left: 0.5rem;
 }

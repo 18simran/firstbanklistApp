@@ -11,21 +11,23 @@
     <title>Banklist App</title>
   </head>
   <body>
+    <!-- **************
+    welcome -->
     <nav id="nav" class="navbar">
-      <h2>Log in to get started</h2>
+      <p class="welcome">Log in to get started</p>
       <div class="logo">
         <img src="./images/favicon (1).png" alt="logo image " />
       </div>
       <form class="login">
         <input
           id="user-button"
-          class="login__input login__input--user"
+          class="login_input login_input_user"
           type="text"
           placeholder="user"
         />
         <input
           id="pin-button"
-          class="login__input login__input--pin"
+          class="login_input login_input_pin"
           type="password"
           placeholder="PIN"
         />
@@ -33,15 +35,104 @@
       </form>
     </nav>
     <main class="app">
+      <!-- **************
+      balance  -->
       <div class="balance">
         <div class="para">
           <p class="balance_label">Current balance</p>
           <p class="balance_date">As of <span class="date">05/03/2037</span></p>
         </div>
         <div>
-          <p class="balance__value">0000€</p>
+          <p class="balance_value">0000€</p>
         </div>
       </div>
+      <!-- **************
+      movements -->
+      <div class="movements">
+        <div class="movements_row">
+          <div class="movements_type movements_type_deposit">2 deposit</div>
+          <div class="movements_date">3 days ago</div>
+          <div class="movements_value">4 000$</div>
+        </div>
+        <div class="movements_row">
+          <div class="movements_type movements_type_withdrawal">
+            2 withdrawl
+          </div>
+          <div class="movements_date">3 days ago</div>
+          <div class="movements_value">4 000$</div>
+        </div>
+      </div>
+      <!-- **************
+      summary -->
+      <div class="summary">
+        <p class="summary_label">In</p>
+        <p class="summary_value summary_value_in">0000$</p>
+        <p class="summary_label">out</p>
+        <p class="summary_value summary_value_out">0000$</p>
+        <p class="summary_label">Interest</p>
+        <p class="summary_value summary_value_interest">00000$</p>
+        <button class="btn_sort">&downarrow; SORT</button>
+      </div>
+      <!-- **************
+      operations -->
+      <div class="operation operation_transfer">
+        <h2>Transfer money</h2>
+        <form class="form form_close">
+          <input
+            type="text"
+            class="form_input form_input_user"
+            placeholder="."
+          />
+          <input
+            placeholder="."
+            type="password"
+            maxlength="6"
+            class="form_input form_input_pin"
+          />
+          <button type="button" class="form_btn form_btn_close">&rarr;</button>
+          <label class="form_label">Transfer to</label>
+          <label class="form_label">Amount</label>
+        </form>
+      </div>
+      <div class="operation operation_request">
+        <h2>Request loan</h2>
+        <form class="form form_close">
+          <input
+            type="text"
+            class="form_input form_input_user"
+            placeholder="."
+          />
+
+          <button type="button" class="form_btn form_btn_close">&rarr;</button>
+          <br />
+          <label class="form_label">Amount</label>
+        </form>
+      </div>
+      <div class="operation operation_close">
+        <h2>close account</h2>
+        <form class="form form_close">
+          <input
+            type="text"
+            class="form_input form_input_user"
+            placeholder="."
+          />
+          <input
+            placeholder="."
+            type="password"
+            maxlength="6"
+            class="form_input form_input_pin"
+          />
+          <button type="button" class="form_btn form_btn_close">&rarr;</button>
+          <label class="form_label">Confirm user</label>
+          <label class="form_label">Confirm pin</label>
+        </form>
+      </div>
+
+      <!-- ***********
+      LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
     </main>
 
     <script src="./script.js"></script>
