@@ -77,33 +77,35 @@
       operations -->
       <div class="operation operation_transfer">
         <h2>Transfer money</h2>
-        <form class="form form_close">
+        <form class="form form_transfer">
           <input
             type="text"
-            class="form_input form_input_user"
+            class="form_input form_transfer_to"
             placeholder="."
           />
           <input
             placeholder="."
             type="password"
             maxlength="6"
-            class="form_input form_input_pin"
+            class="form_input form_transfer_amount"
           />
-          <button type="button" class="form_btn form_btn_close">&rarr;</button>
+          <button type="button" class="form_btn form_transfer_btn">
+            &rarr;
+          </button>
           <label class="form_label">Transfer to</label>
           <label class="form_label">Amount</label>
         </form>
       </div>
       <div class="operation operation_request">
         <h2>Request loan</h2>
-        <form class="form form_close">
+        <form class="form form_request">
           <input
-            type="text"
-            class="form_input form_input_user"
+            type="password"
+            class="form_input form_input_loan"
             placeholder="."
           />
 
-          <button type="button" class="form_btn form_btn_close">&rarr;</button>
+          <button type="button" class="form_btn form_btn_loan">&rarr;</button>
           <br />
           <label class="form_label">Amount</label>
         </form>
@@ -113,14 +115,14 @@
         <form class="form form_close">
           <input
             type="text"
-            class="form_input form_input_user"
+            class="form_input form_input_user_close"
             placeholder="."
           />
           <input
             placeholder="."
             type="password"
             maxlength="6"
-            class="form_input form_input_pin"
+            class="form_input form_input_pin_close"
           />
           <button type="button" class="form_btn form_btn_close">&rarr;</button>
           <label class="form_label">Confirm user</label>

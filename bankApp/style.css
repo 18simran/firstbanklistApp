@@ -21,7 +21,7 @@ form {
   gap: 1rem;
 }
 .welcome {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .login .login_input {
@@ -62,7 +62,7 @@ main
   row-gap: 2rem;
   column-gap: 4rem;
 
-  /* opacity: 0; */
+  opacity: 0;
   transition: all 3s;
 }
 .balance {
@@ -135,10 +135,10 @@ summary
   margin-top: 1rem;
 }
 .summary_label {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin-right: 0.8rem;
+  margin-right: 0.4rem;
 }
 .summary_value {
   font-size: 1rem;
@@ -146,7 +146,7 @@ summary
 }
 .summary_value_in,
 .summary_value_interest {
-  color: #66c873;
+  color: #38c04a;
 }
 .summary_value_out {
   color: #f5465d;
@@ -156,7 +156,7 @@ summary
   border: none;
   background: none;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 
