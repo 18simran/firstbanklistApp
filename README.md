@@ -1,0 +1,1 @@
+#Bankapp This is the mini project that i have created in purpose of learning javascript . Its been a great experience while learning this i've got to know many brief details. 🌷Functionality of bankApp It usually get the data from the database then briefly check whether user deposited or withdrew money ,which in result create the new html elements using js.
